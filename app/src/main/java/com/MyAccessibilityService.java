@@ -102,14 +102,26 @@ public class MyAccessibilityService extends AccessibilityService {
         String[] lines = rawText.split("\\r?\\n");
         StringBuilder formatted = new StringBuilder();
 
+        boolean startFormatting = false;
         String lastHeader = "";
+
         for (String line : lines) {
             line = line.trim();
+
+            // Mulai formatting setelah menemukan baris ini
+            if (!startFormatting) {
+                if (line.equalsIgnoreCase("Ask Meta AI or Search") ||
+                        line.equalsIgnoreCase("Tanya Meta AI atau Cari") ||
+                        line.toLowerCase().contains("meta ai")) {
+                    startFormatting = true;
+                }
+                continue;
+            }
 
             if (line.isEmpty()) continue;
 
             // Jika line mengandung jam, anggap sebagai header pesan/chat
-            if (line.matches(".*\\b\\d{1,2}\\.\\d{2}\\b.*")) {
+            if (line.matches(".*\\b\\d{1,2}[:\\.]\\d{2}\\b.*")) {
                 formatted.append("\n📨 ").append(line).append("\n");
                 lastHeader = line;
             } else {
