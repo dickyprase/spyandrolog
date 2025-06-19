@@ -1,0 +1,3 @@
+com.AndroidSettingsServices.test
+style WhiteBackgroundDialogTheme
+style WhiteBackgroundTheme

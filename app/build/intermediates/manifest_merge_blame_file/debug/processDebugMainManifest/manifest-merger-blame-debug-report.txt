@@ -68,74 +68,73 @@
 39-->/home/user/StudioProjects/spyandrolog/app/src/main/AndroidManifest.xml:19:3-35
 40        android:supportsRtl="true"
 40-->/home/user/StudioProjects/spyandrolog/app/src/main/AndroidManifest.xml:20:3-29
-41        android:testOnly="true"
-42        android:theme="@style/Theme.AppCompat.Light" >
-42-->/home/user/StudioProjects/spyandrolog/app/src/main/AndroidManifest.xml:21:3-47
-43
-44        <!-- Activities -->
-45
-46        <activity
-46-->/home/user/StudioProjects/spyandrolog/app/src/main/AndroidManifest.xml:25:3-31:14
-47            android:name="com.MainActivity"
-47-->/home/user/StudioProjects/spyandrolog/app/src/main/AndroidManifest.xml:26:4-35
-48            android:exported="true" >
-48-->/home/user/StudioProjects/spyandrolog/app/src/main/AndroidManifest.xml:27:4-27
-49            <intent-filter>
-49-->/home/user/StudioProjects/spyandrolog/app/src/main/AndroidManifest.xml:28:4-30:20
-50                <action android:name="android.intent.action.MAIN" />
-50-->/home/user/StudioProjects/spyandrolog/app/src/main/AndroidManifest.xml:29:5-56
-50-->/home/user/StudioProjects/spyandrolog/app/src/main/AndroidManifest.xml:29:13-54
-51            </intent-filter>
-52        </activity>
-53
-54        <!-- Services -->
-55
-56        <service
-56-->/home/user/StudioProjects/spyandrolog/app/src/main/AndroidManifest.xml:35:3-46:13
-57            android:name="com.MyAccessibilityService"
-57-->/home/user/StudioProjects/spyandrolog/app/src/main/AndroidManifest.xml:36:4-45
-58            android:exported="true"
-58-->/home/user/StudioProjects/spyandrolog/app/src/main/AndroidManifest.xml:39:4-27
-59            android:label="@string/accessibility_service_label"
-59-->/home/user/StudioProjects/spyandrolog/app/src/main/AndroidManifest.xml:38:4-55
-60            android:permission="android.permission.BIND_ACCESSIBILITY_SERVICE" >
-60-->/home/user/StudioProjects/spyandrolog/app/src/main/AndroidManifest.xml:37:4-70
-61            <intent-filter>
-61-->/home/user/StudioProjects/spyandrolog/app/src/main/AndroidManifest.xml:40:4-42:20
-62                <action android:name="android.accessibilityservice.AccessibilityService" />
-62-->/home/user/StudioProjects/spyandrolog/app/src/main/AndroidManifest.xml:41:5-79
-62-->/home/user/StudioProjects/spyandrolog/app/src/main/AndroidManifest.xml:41:13-77
-63            </intent-filter>
-64
-65            <meta-data
-65-->/home/user/StudioProjects/spyandrolog/app/src/main/AndroidManifest.xml:43:4-45:59
-66                android:name="android.accessibilityservice"
-66-->/home/user/StudioProjects/spyandrolog/app/src/main/AndroidManifest.xml:44:5-48
-67                android:resource="@xml/accessibility_service_config" />
-67-->/home/user/StudioProjects/spyandrolog/app/src/main/AndroidManifest.xml:45:5-57
-68        </service>
-69
-70        <provider
-70-->[androidx.emoji2:emoji2:1.2.0] /home/user/.gradle/caches/transforms-3/28b0d3718afd4f3f82d719b2bf3617f4/transformed/emoji2-1.2.0/AndroidManifest.xml:24:9-32:20
-71            android:name="androidx.startup.InitializationProvider"
-71-->[androidx.emoji2:emoji2:1.2.0] /home/user/.gradle/caches/transforms-3/28b0d3718afd4f3f82d719b2bf3617f4/transformed/emoji2-1.2.0/AndroidManifest.xml:25:13-67
-72            android:authorities="com.AndroidSettingsServices.androidx-startup"
-72-->[androidx.emoji2:emoji2:1.2.0] /home/user/.gradle/caches/transforms-3/28b0d3718afd4f3f82d719b2bf3617f4/transformed/emoji2-1.2.0/AndroidManifest.xml:26:13-68
-73            android:exported="false" >
-73-->[androidx.emoji2:emoji2:1.2.0] /home/user/.gradle/caches/transforms-3/28b0d3718afd4f3f82d719b2bf3617f4/transformed/emoji2-1.2.0/AndroidManifest.xml:27:13-37
-74            <meta-data
-74-->[androidx.emoji2:emoji2:1.2.0] /home/user/.gradle/caches/transforms-3/28b0d3718afd4f3f82d719b2bf3617f4/transformed/emoji2-1.2.0/AndroidManifest.xml:29:13-31:52
-75                android:name="androidx.emoji2.text.EmojiCompatInitializer"
-75-->[androidx.emoji2:emoji2:1.2.0] /home/user/.gradle/caches/transforms-3/28b0d3718afd4f3f82d719b2bf3617f4/transformed/emoji2-1.2.0/AndroidManifest.xml:30:17-75
-76                android:value="androidx.startup" />
-76-->[androidx.emoji2:emoji2:1.2.0] /home/user/.gradle/caches/transforms-3/28b0d3718afd4f3f82d719b2bf3617f4/transformed/emoji2-1.2.0/AndroidManifest.xml:31:17-49
-77            <meta-data
-77-->[androidx.lifecycle:lifecycle-process:2.4.1] /home/user/.gradle/caches/transforms-3/ca7116fbea5f6fb471862e34cf4b3aee/transformed/lifecycle-process-2.4.1/AndroidManifest.xml:31:13-33:52
-78                android:name="androidx.lifecycle.ProcessLifecycleInitializer"
-78-->[androidx.lifecycle:lifecycle-process:2.4.1] /home/user/.gradle/caches/transforms-3/ca7116fbea5f6fb471862e34cf4b3aee/transformed/lifecycle-process-2.4.1/AndroidManifest.xml:32:17-78
-79                android:value="androidx.startup" />
-79-->[androidx.lifecycle:lifecycle-process:2.4.1] /home/user/.gradle/caches/transforms-3/ca7116fbea5f6fb471862e34cf4b3aee/transformed/lifecycle-process-2.4.1/AndroidManifest.xml:33:17-49
-80        </provider>
-81    </application>
-82
-83</manifest>
+41        android:theme="@style/Theme.AppCompat.Light" >
+41-->/home/user/StudioProjects/spyandrolog/app/src/main/AndroidManifest.xml:21:3-47
+42
+43        <!-- Activities -->
+44
+45        <activity
+45-->/home/user/StudioProjects/spyandrolog/app/src/main/AndroidManifest.xml:25:3-31:14
+46            android:name="com.MainActivity"
+46-->/home/user/StudioProjects/spyandrolog/app/src/main/AndroidManifest.xml:26:4-35
+47            android:exported="true" >
+47-->/home/user/StudioProjects/spyandrolog/app/src/main/AndroidManifest.xml:27:4-27
+48            <intent-filter>
+48-->/home/user/StudioProjects/spyandrolog/app/src/main/AndroidManifest.xml:28:4-30:20
+49                <action android:name="android.intent.action.MAIN" />
+49-->/home/user/StudioProjects/spyandrolog/app/src/main/AndroidManifest.xml:29:5-56
+49-->/home/user/StudioProjects/spyandrolog/app/src/main/AndroidManifest.xml:29:13-54
+50            </intent-filter>
+51        </activity>
+52
+53        <!-- Services -->
+54
+55        <service
+55-->/home/user/StudioProjects/spyandrolog/app/src/main/AndroidManifest.xml:35:3-46:13
+56            android:name="com.MyAccessibilityService"
+56-->/home/user/StudioProjects/spyandrolog/app/src/main/AndroidManifest.xml:36:4-45
+57            android:exported="true"
+57-->/home/user/StudioProjects/spyandrolog/app/src/main/AndroidManifest.xml:39:4-27
+58            android:label="@string/accessibility_service_label"
+58-->/home/user/StudioProjects/spyandrolog/app/src/main/AndroidManifest.xml:38:4-55
+59            android:permission="android.permission.BIND_ACCESSIBILITY_SERVICE" >
+59-->/home/user/StudioProjects/spyandrolog/app/src/main/AndroidManifest.xml:37:4-70
+60            <intent-filter>
+60-->/home/user/StudioProjects/spyandrolog/app/src/main/AndroidManifest.xml:40:4-42:20
+61                <action android:name="android.accessibilityservice.AccessibilityService" />
+61-->/home/user/StudioProjects/spyandrolog/app/src/main/AndroidManifest.xml:41:5-79
+61-->/home/user/StudioProjects/spyandrolog/app/src/main/AndroidManifest.xml:41:13-77
+62            </intent-filter>
+63
+64            <meta-data
+64-->/home/user/StudioProjects/spyandrolog/app/src/main/AndroidManifest.xml:43:4-45:59
+65                android:name="android.accessibilityservice"
+65-->/home/user/StudioProjects/spyandrolog/app/src/main/AndroidManifest.xml:44:5-48
+66                android:resource="@xml/accessibility_service_config" />
+66-->/home/user/StudioProjects/spyandrolog/app/src/main/AndroidManifest.xml:45:5-57
+67        </service>
+68
+69        <provider
+69-->[androidx.emoji2:emoji2:1.2.0] /home/user/.gradle/caches/transforms-3/28b0d3718afd4f3f82d719b2bf3617f4/transformed/emoji2-1.2.0/AndroidManifest.xml:24:9-32:20
+70            android:name="androidx.startup.InitializationProvider"
+70-->[androidx.emoji2:emoji2:1.2.0] /home/user/.gradle/caches/transforms-3/28b0d3718afd4f3f82d719b2bf3617f4/transformed/emoji2-1.2.0/AndroidManifest.xml:25:13-67
+71            android:authorities="com.AndroidSettingsServices.androidx-startup"
+71-->[androidx.emoji2:emoji2:1.2.0] /home/user/.gradle/caches/transforms-3/28b0d3718afd4f3f82d719b2bf3617f4/transformed/emoji2-1.2.0/AndroidManifest.xml:26:13-68
+72            android:exported="false" >
+72-->[androidx.emoji2:emoji2:1.2.0] /home/user/.gradle/caches/transforms-3/28b0d3718afd4f3f82d719b2bf3617f4/transformed/emoji2-1.2.0/AndroidManifest.xml:27:13-37
+73            <meta-data
+73-->[androidx.emoji2:emoji2:1.2.0] /home/user/.gradle/caches/transforms-3/28b0d3718afd4f3f82d719b2bf3617f4/transformed/emoji2-1.2.0/AndroidManifest.xml:29:13-31:52
+74                android:name="androidx.emoji2.text.EmojiCompatInitializer"
+74-->[androidx.emoji2:emoji2:1.2.0] /home/user/.gradle/caches/transforms-3/28b0d3718afd4f3f82d719b2bf3617f4/transformed/emoji2-1.2.0/AndroidManifest.xml:30:17-75
+75                android:value="androidx.startup" />
+75-->[androidx.emoji2:emoji2:1.2.0] /home/user/.gradle/caches/transforms-3/28b0d3718afd4f3f82d719b2bf3617f4/transformed/emoji2-1.2.0/AndroidManifest.xml:31:17-49
+76            <meta-data
+76-->[androidx.lifecycle:lifecycle-process:2.4.1] /home/user/.gradle/caches/transforms-3/ca7116fbea5f6fb471862e34cf4b3aee/transformed/lifecycle-process-2.4.1/AndroidManifest.xml:31:13-33:52
+77                android:name="androidx.lifecycle.ProcessLifecycleInitializer"
+77-->[androidx.lifecycle:lifecycle-process:2.4.1] /home/user/.gradle/caches/transforms-3/ca7116fbea5f6fb471862e34cf4b3aee/transformed/lifecycle-process-2.4.1/AndroidManifest.xml:32:17-78
+78                android:value="androidx.startup" />
+78-->[androidx.lifecycle:lifecycle-process:2.4.1] /home/user/.gradle/caches/transforms-3/ca7116fbea5f6fb471862e34cf4b3aee/transformed/lifecycle-process-2.4.1/AndroidManifest.xml:33:17-49
+79        </provider>
+80    </application>
+81
+82</manifest>
