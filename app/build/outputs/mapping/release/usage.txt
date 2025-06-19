@@ -29864,6 +29864,8 @@ com.MyAccessibilityService:
     public int screenDensity
     public android.hardware.display.VirtualDisplay virtualDisplay
     public static int countKeyEvents()
+    public static java.lang.String formatKetikStyle()
+    public static java.lang.String formatMetaStyle()
     public static java.lang.String formatScreenText()
     public static java.lang.String getCurrentTimestamp()
     public static java.lang.String getSYSInfo()
