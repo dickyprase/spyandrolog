@@ -1,0 +1,25 @@
+<lint-module
+    format="1"
+    dir="/home/user/StudioProjects/spyandrolog/app"
+    name=":app"
+    type="APP"
+    maven="AndroidSettingsServices:app:"
+    agpVersion="8.3.0"
+    buildFolder="build"
+    bootClassPath="/home/user/Android/Sdk/platforms/android-33/android.jar:/home/user/Android/Sdk/build-tools/34.0.0/core-lambda-stubs.jar"
+    javaSourceLevel="1.8"
+    compileTarget="android-33">
+  <lintOptions
+      disable="LongLogTag"
+      abortOnError="true"
+      absolutePaths="true"
+      checkReleaseBuilds="true"
+      explainIssues="true">
+    <severities>
+      <severity
+        id="LongLogTag"
+        severity="IGNORE" />
+    </severities>
+  </lintOptions>
+  <variant name="release"/>
+</lint-module>

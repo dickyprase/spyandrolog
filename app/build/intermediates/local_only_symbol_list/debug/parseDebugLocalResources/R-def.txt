@@ -1,0 +1,11 @@
+R_DEF: Internal format may change without notice
+local
+drawable all_good
+drawable ic_launcher
+id gifImageView
+layout layout
+string accessibility_service_description
+string accessibility_service_label
+string app_name
+style AppTheme
+xml accessibility_service_config

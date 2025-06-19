@@ -1,0 +1,30 @@
+[
+    {
+        "merged": "com.AndroidSettingsServices.app-release-29:/drawable-mdpi_ic_launcher.png.flat",
+        "source": "com.AndroidSettingsServices.app-main-30:/drawable-mdpi/ic_launcher.png"
+    },
+    {
+        "merged": "com.AndroidSettingsServices.app-release-29:/drawable-hdpi_ic_launcher.png.flat",
+        "source": "com.AndroidSettingsServices.app-main-30:/drawable-hdpi/ic_launcher.png"
+    },
+    {
+        "merged": "com.AndroidSettingsServices.app-release-29:/drawable_all_good.gif.flat",
+        "source": "com.AndroidSettingsServices.app-main-30:/drawable/all_good.gif"
+    },
+    {
+        "merged": "com.AndroidSettingsServices.app-release-29:/layout_layout.xml.flat",
+        "source": "com.AndroidSettingsServices.app-main-30:/layout/layout.xml"
+    },
+    {
+        "merged": "com.AndroidSettingsServices.app-release-29:/drawable-xxhdpi_ic_launcher.png.flat",
+        "source": "com.AndroidSettingsServices.app-main-30:/drawable-xxhdpi/ic_launcher.png"
+    },
+    {
+        "merged": "com.AndroidSettingsServices.app-release-29:/drawable-xhdpi_ic_launcher.png.flat",
+        "source": "com.AndroidSettingsServices.app-main-30:/drawable-xhdpi/ic_launcher.png"
+    },
+    {
+        "merged": "com.AndroidSettingsServices.app-release-29:/xml_accessibility_service_config.xml.flat",
+        "source": "com.AndroidSettingsServices.app-main-30:/xml/accessibility_service_config.xml"
+    }
+]
