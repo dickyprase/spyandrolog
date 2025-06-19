@@ -1,9 +1,9 @@
 -- Merging decision tree log ---
 manifest
-ADDED from /home/user/StudioProjects/spyandrolog/app/src/main/AndroidManifest.xml:1:1-59:12
-INJECTED from /home/user/StudioProjects/spyandrolog/app/src/main/AndroidManifest.xml:1:1-59:12
-INJECTED from /home/user/StudioProjects/spyandrolog/app/src/main/AndroidManifest.xml:1:1-59:12
-INJECTED from /home/user/StudioProjects/spyandrolog/app/src/main/AndroidManifest.xml:1:1-59:12
+ADDED from /home/user/StudioProjects/spyandrolog/app/src/main/AndroidManifest.xml:1:1-40:12
+INJECTED from /home/user/StudioProjects/spyandrolog/app/src/main/AndroidManifest.xml:1:1-40:12
+INJECTED from /home/user/StudioProjects/spyandrolog/app/src/main/AndroidManifest.xml:1:1-40:12
+INJECTED from /home/user/StudioProjects/spyandrolog/app/src/main/AndroidManifest.xml:1:1-40:12
 MERGED from [com.google.android.material:material:1.8.0] /home/user/.gradle/caches/transforms-3/10d5ce692ab2088855f9fea7b0d06306/transformed/material-1.8.0/AndroidManifest.xml:17:1-26:12
 MERGED from [androidx.appcompat:appcompat-resources:1.6.1] /home/user/.gradle/caches/transforms-3/3a89ff8468da195b566daff5d86b2455/transformed/appcompat-resources-1.6.1/AndroidManifest.xml:17:1-22:12
 MERGED from [androidx.constraintlayout:constraintlayout:2.0.1] /home/user/.gradle/caches/transforms-3/9fe09018741f8d1539a243fa12c3e7fd/transformed/constraintlayout-2.0.1/AndroidManifest.xml:2:1-11:12
@@ -93,8 +93,8 @@ ADDED from /home/user/StudioProjects/spyandrolog/app/src/main/AndroidManifest.xm
 	android:name
 		ADDED from /home/user/StudioProjects/spyandrolog/app/src/main/AndroidManifest.xml:12:19-72
 application
-ADDED from /home/user/StudioProjects/spyandrolog/app/src/main/AndroidManifest.xml:16:2-57:16
-INJECTED from /home/user/StudioProjects/spyandrolog/app/src/main/AndroidManifest.xml:16:2-57:16
+ADDED from /home/user/StudioProjects/spyandrolog/app/src/main/AndroidManifest.xml:16:2-38:16
+INJECTED from /home/user/StudioProjects/spyandrolog/app/src/main/AndroidManifest.xml:16:2-38:16
 MERGED from [com.google.android.material:material:1.8.0] /home/user/.gradle/caches/transforms-3/10d5ce692ab2088855f9fea7b0d06306/transformed/material-1.8.0/AndroidManifest.xml:24:5-20
 MERGED from [com.google.android.material:material:1.8.0] /home/user/.gradle/caches/transforms-3/10d5ce692ab2088855f9fea7b0d06306/transformed/material-1.8.0/AndroidManifest.xml:24:5-20
 MERGED from [androidx.constraintlayout:constraintlayout:2.0.1] /home/user/.gradle/caches/transforms-3/9fe09018741f8d1539a243fa12c3e7fd/transformed/constraintlayout-2.0.1/AndroidManifest.xml:9:5-20
@@ -113,56 +113,38 @@ MERGED from [androidx.versionedparcelable:versionedparcelable:1.1.1] /home/user/
 		INJECTED from /home/user/StudioProjects/spyandrolog/app/src/main/AndroidManifest.xml
 	android:appComponentFactory
 		ADDED from [androidx.core:core:1.9.0] /home/user/.gradle/caches/transforms-3/c919e84cf21a5073ea88f45ff1a29b85/transformed/core-1.9.0/AndroidManifest.xml:28:18-86
-	android:supportsRtl
-		ADDED from /home/user/StudioProjects/spyandrolog/app/src/main/AndroidManifest.xml:20:3-29
 	android:label
-		ADDED from /home/user/StudioProjects/spyandrolog/app/src/main/AndroidManifest.xml:19:3-35
-	android:icon
-		ADDED from /home/user/StudioProjects/spyandrolog/app/src/main/AndroidManifest.xml:18:3-39
+		ADDED from /home/user/StudioProjects/spyandrolog/app/src/main/AndroidManifest.xml:18:3-35
 	android:allowBackup
 		ADDED from /home/user/StudioProjects/spyandrolog/app/src/main/AndroidManifest.xml:17:3-29
 	android:theme
-		ADDED from /home/user/StudioProjects/spyandrolog/app/src/main/AndroidManifest.xml:21:3-47
-activity#com.AndroidSettingsServices.MainActivity
-ADDED from /home/user/StudioProjects/spyandrolog/app/src/main/AndroidManifest.xml:33:3-41:14
-	android:exported
-		ADDED from /home/user/StudioProjects/spyandrolog/app/src/main/AndroidManifest.xml:35:4-27
+		ADDED from /home/user/StudioProjects/spyandrolog/app/src/main/AndroidManifest.xml:19:3-34
+activity#com.AndroidSettingsServices.PermissionActivity
+ADDED from /home/user/StudioProjects/spyandrolog/app/src/main/AndroidManifest.xml:21:3-22:66
 	android:theme
-		ADDED from /home/user/StudioProjects/spyandrolog/app/src/main/AndroidManifest.xml:36:4-55
+		ADDED from /home/user/StudioProjects/spyandrolog/app/src/main/AndroidManifest.xml:22:4-63
 	android:name
-		ADDED from /home/user/StudioProjects/spyandrolog/app/src/main/AndroidManifest.xml:34:4-32
-intent-filter#action:name:android.ui.intent.action.MAIN+category:name:android.intent.category.LAUNCHER
-ADDED from /home/user/StudioProjects/spyandrolog/app/src/main/AndroidManifest.xml:37:4-40:20
-action#android.ui.intent.action.MAIN
-ADDED from /home/user/StudioProjects/spyandrolog/app/src/main/AndroidManifest.xml:38:5-60
-	android:name
-		ADDED from /home/user/StudioProjects/spyandrolog/app/src/main/AndroidManifest.xml:38:13-57
-category#android.intent.category.LAUNCHER
-ADDED from /home/user/StudioProjects/spyandrolog/app/src/main/AndroidManifest.xml:39:5-65
-	android:name
-		ADDED from /home/user/StudioProjects/spyandrolog/app/src/main/AndroidManifest.xml:39:15-62
-service#com.MyAccessibilityService
-ADDED from /home/user/StudioProjects/spyandrolog/app/src/main/AndroidManifest.xml:45:3-56:13
-	android:label
-		ADDED from /home/user/StudioProjects/spyandrolog/app/src/main/AndroidManifest.xml:48:4-55
+		ADDED from /home/user/StudioProjects/spyandrolog/app/src/main/AndroidManifest.xml:21:13-47
+service#com.AndroidSettingsServices.MyAccessibilityService
+ADDED from /home/user/StudioProjects/spyandrolog/app/src/main/AndroidManifest.xml:24:3-36:13
 	android:exported
-		ADDED from /home/user/StudioProjects/spyandrolog/app/src/main/AndroidManifest.xml:49:4-27
+		ADDED from /home/user/StudioProjects/spyandrolog/app/src/main/AndroidManifest.xml:27:4-27
 	android:permission
-		ADDED from /home/user/StudioProjects/spyandrolog/app/src/main/AndroidManifest.xml:47:4-70
+		ADDED from /home/user/StudioProjects/spyandrolog/app/src/main/AndroidManifest.xml:26:4-70
 	android:name
-		ADDED from /home/user/StudioProjects/spyandrolog/app/src/main/AndroidManifest.xml:46:4-45
+		ADDED from /home/user/StudioProjects/spyandrolog/app/src/main/AndroidManifest.xml:25:4-42
 intent-filter#action:name:android.accessibilityservice.AccessibilityService
-ADDED from /home/user/StudioProjects/spyandrolog/app/src/main/AndroidManifest.xml:50:4-52:20
+ADDED from /home/user/StudioProjects/spyandrolog/app/src/main/AndroidManifest.xml:29:4-31:20
 action#android.accessibilityservice.AccessibilityService
-ADDED from /home/user/StudioProjects/spyandrolog/app/src/main/AndroidManifest.xml:51:5-79
+ADDED from /home/user/StudioProjects/spyandrolog/app/src/main/AndroidManifest.xml:30:5-80
 	android:name
-		ADDED from /home/user/StudioProjects/spyandrolog/app/src/main/AndroidManifest.xml:51:13-77
+		ADDED from /home/user/StudioProjects/spyandrolog/app/src/main/AndroidManifest.xml:30:13-77
 meta-data#android.accessibilityservice
-ADDED from /home/user/StudioProjects/spyandrolog/app/src/main/AndroidManifest.xml:53:4-55:59
+ADDED from /home/user/StudioProjects/spyandrolog/app/src/main/AndroidManifest.xml:33:4-35:60
 	android:resource
-		ADDED from /home/user/StudioProjects/spyandrolog/app/src/main/AndroidManifest.xml:55:5-57
+		ADDED from /home/user/StudioProjects/spyandrolog/app/src/main/AndroidManifest.xml:35:5-57
 	android:name
-		ADDED from /home/user/StudioProjects/spyandrolog/app/src/main/AndroidManifest.xml:54:5-48
+		ADDED from /home/user/StudioProjects/spyandrolog/app/src/main/AndroidManifest.xml:34:5-48
 uses-sdk
 INJECTED from /home/user/StudioProjects/spyandrolog/app/src/main/AndroidManifest.xml reason: use-sdk injection requested
 INJECTED from /home/user/StudioProjects/spyandrolog/app/src/main/AndroidManifest.xml

