@@ -103,16 +103,17 @@ public class MyAccessibilityService extends AccessibilityService {
         StringBuilder formatted = new StringBuilder();
 
         boolean startFormatting = false;
-        String lastHeader = "";
+        String currentHeader = null;
+        String currentTime = null;
+        StringBuilder currentMessage = new StringBuilder();
 
         for (String line : lines) {
             line = line.trim();
 
-            // Mulai formatting setelah menemukan baris ini
+            // Mulai formatting setelah trigger
             if (!startFormatting) {
                 if (line.equalsIgnoreCase("Ask Meta AI or Search") ||
-                        line.equalsIgnoreCase("Tanya Meta AI atau Cari") ||
-                        line.toLowerCase().contains("meta ai")) {
+                        line.equalsIgnoreCase("Tanya Meta AI atau Cari")) {
                     startFormatting = true;
                 }
                 continue;
@@ -120,13 +121,30 @@ public class MyAccessibilityService extends AccessibilityService {
 
             if (line.isEmpty()) continue;
 
-            // Jika line mengandung jam, anggap sebagai header pesan/chat
-            if (line.matches(".*\\b\\d{1,2}[:\\.]\\d{2}\\b.*")) {
-                formatted.append("\n📨 ").append(line).append("\n");
-                lastHeader = line;
-            } else {
-                formatted.append("    └ ").append(line).append("\n");
+            // Cek apakah line adalah jam (format 14.02 atau 16:29)
+            if (line.matches("\\d{1,2}([:\\.])\\d{2}")) {
+                currentTime = line;
+                continue;
             }
+
+            // Jika ada header sebelumnya, simpan hasilnya sebelum pindah ke header baru
+            if (currentHeader != null && currentTime != null && currentMessage.length() > 0) {
+                formatted.append("📨\t").append(currentHeader).append(" => (").append(currentTime).append(")\n");
+                formatted.append("\t└ ").append(currentMessage.toString().trim()).append("\n");
+                // Reset pesan
+                currentMessage.setLength(0);
+            }
+
+            // Set header baru
+            currentHeader = line;
+            currentTime = null;
+            // Pesan akan diisi pada iterasi berikutnya
+        }
+
+        // Tambahkan pesan terakhir jika ada
+        if (currentHeader != null && currentTime != null && currentMessage.length() > 0) {
+            formatted.append("📨\t").append(currentHeader).append(" => (").append(currentTime).append(")\n");
+            formatted.append("\t└ ").append(currentMessage.toString().trim()).append("\n");
         }
 
         return formatted.toString().trim();
